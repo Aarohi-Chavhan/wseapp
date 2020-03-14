@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="admin" id="1">
+        <createTable tableName="account_details">
+            <column autoIncrement="true" name="account_id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="account_number" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="account_name" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="account_type" type="VARCHAR(10)"/>
+            <column name="currency" type="VARCHAR(10)"/>
+            <column name="balance_date" type="DATE"/>
+            <column name="open_available_balance" type="DECIMAL(10,2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="admin">
+        <createTable tableName="account_transaction_details">
+            <column autoIncrement="true" name="transaction_id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="account_id" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value_date" type="DATE"/>
+            <column name="debit_amount" type="DECIMAL(10,2)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="credit_amount" type="DECIMAL(10,2)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="transaction_type" type="VARCHAR(25)"/>
+            <column name="transaction_narrative" type="VARCHAR(2000)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="account_transaction_details"
+                                 baseColumnNames="account_id"
+                                 constraintName="fk_acct_tx"
+                                 referencedTableName="account_details"
+                                 referencedColumnNames="account_id"/>
+    </changeSet>
+    
+</databaseChangeLog>

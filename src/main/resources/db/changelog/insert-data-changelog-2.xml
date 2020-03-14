@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="admin" id="1">
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="1"/>
+            <column name="account_number" value="585309209"/>
+            <column name="account_name" value="SGSavings726"/>
+            <column name="account_type" value="SAVINGS"/>
+            <column name="currency" value="SGD"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="84237.81"/>
+        </insert>
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="2"/>
+            <column name="account_number" value="79107454"/>
+            <column name="account_name" value="AUSavings454"/>
+            <column name="account_type" value="SAVINGS"/>
+            <column name="currency" value="AUD"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="98745.25"/>
+        </insert>
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="3"/>
+            <column name="account_number" value="321143048"/>
+            <column name="account_name" value="AUCurrent433"/>
+            <column name="account_type" value="CURRENT"/>
+            <column name="currency" value="AUD"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="70456.85"/>
+        </insert>
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="4"/>
+            <column name="account_number" value="561982430"/>
+            <column name="account_name" value="INRSavings430"/>
+            <column name="account_type" value="SAVINGS"/>
+            <column name="currency" value="INR"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="74125.98"/>
+        </insert>
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="5"/>
+            <column name="account_number" value="528103765"/>
+            <column name="account_name" value="SGCurrent765"/>
+            <column name="account_type" value="CURRENT"/>
+            <column name="currency" value="SGD"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="56743.89"/>
+        </insert>
+        <insert tableName="account_details">
+            <column name="account_id" valueNumeric="6"/>
+            <column name="account_number" value="328745968"/>
+            <column name="account_name" value="INRCurrent968"/>
+            <column name="account_type" value="CURRENT"/>
+            <column name="currency" value="INR"/>
+            <column name="balance_date" valueDate="2018-08-11"/>
+            <column name="open_available_balance" valueNumeric="54879.25"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="account_id" valueNumeric="1"/>
+            <column name="transaction_id" valueNumeric="1001"/>
+            <column name="value_date" valueDate="2019-01-23"/>
+            <column name="debit_amount" valueNumeric="4876.25"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1002"/>
+            <column name="account_id" valueNumeric="1"/>
+            <column name="value_date" valueDate="2019-01-24"/>
+            <column name="debit_amount" valueNumeric="2543.08"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1003"/>
+            <column name="account_id" valueNumeric="1"/>
+            <column name="value_date" valueDate="2019-02-08"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="10564.23"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1004"/>
+            <column name="account_id" valueNumeric="1"/>
+            <column name="value_date" valueDate="2019-02-09"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="4563.21"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+
+        <insert tableName="account_transaction_details">
+            <column name="account_id" value="2"/>
+            <column name="transaction_id" valueNumeric="1005"/>
+            <column name="value_date" valueDate="2019-12-01"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="964.56"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1006"/>
+            <column name="account_id" value="2"/>
+            <column name="value_date" valueDate="2019-01-02"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="3564.25"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1007"/>
+            <column name="account_id" value="2"/>
+            <column name="value_date" valueDate="2019-02-08"/>
+            <column name="debit_amount" valueNumeric="7549.00"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+
+        <insert tableName="account_transaction_details">
+            <column name="account_id" value="3"/>
+            <column name="transaction_id" valueNumeric="1008"/>
+            <column name="value_date" valueDate="2019-01-01"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="74512.36"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1009"/>
+            <column name="account_id" value="3"/>
+            <column name="value_date" valueDate="2019-01-04"/>
+            <column name="debit_amount" valueNumeric="654.23"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1010"/>
+            <column name="account_id" value="3"/>
+            <column name="value_date" valueDate="2019-01-17"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="12564.23"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1011"/>
+            <column name="account_id" value="3"/>
+            <column name="value_date" valueDate="2019-02-09"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="1363.21"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="account_id" value="3"/>
+            <column name="transaction_id" valueNumeric="1012"/>
+            <column name="value_date" valueDate="2019-03-01"/>
+            <column name="debit_amount" valueNumeric="10897.00"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1013"/>
+            <column name="account_id" value="4"/>
+            <column name="value_date" valueDate="2019-01-04"/>
+            <column name="debit_amount" valueNumeric="6454.23"/>
+            <column name="credit_amount" valueNumeric="0.00"/>
+            <column name="transaction_type" value="Debit"/>
+            <column name="transaction_narrative" value="Debit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1014"/>
+            <column name="account_id" value="5"/>
+            <column name="value_date" valueDate="2019-01-12"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="12984.98"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+        <insert tableName="account_transaction_details">
+            <column name="transaction_id" valueNumeric="1015"/>
+            <column name="account_id" value="6"/>
+            <column name="value_date" valueDate="2019-01-23"/>
+            <column name="debit_amount" valueNumeric="0.00"/>
+            <column name="credit_amount" valueNumeric="6589.98"/>
+            <column name="transaction_type" value="Credit"/>
+            <column name="transaction_narrative" value="Credit Transaction"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
